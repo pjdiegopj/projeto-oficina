@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.site-header {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1280px;
+    background: #111111;
+    border: 1px solid rgba(100, 100, 100, 0.8);
+    padding: 0.7rem 1.25rem;
+    border-radius: 15px;
+    z-index: 999;
+}
+
+.header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit
+}
+
+.brand-logo {
+    font-family: "Bebas Neue", sans-serif;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #252525, #202020);
+    color: #f3a832;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 10px;
+    border: 1px solid;
+   
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.brand-title {
+    display: block;
+}
+
+.shared-workshop {
+    display: block;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: #c9c9c9;
+    font-weight: 300;
+}
+
+.makers {
+    color: #f3a832;
+}
+
+.site-nav {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .site-header {
+        width: calc(100% - 40px);
+
+    }
+}
