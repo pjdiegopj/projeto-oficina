@@ -4,13 +4,15 @@
     position: fixed;
     top: 10px;
     left: 50%;
-    transform: translate(-50%);
-    width: 1280px;
+    transform: translateX(-50%);
+    width: min(1280px, calc(100% - 40px));
+    max-width: 1280px;
     background: #111111;
     border: 1px solid rgba(100, 100, 100, 0.8);
     padding: 0.7rem 1.25rem;
     border-radius: 15px;
     z-index: 999;
+    box-sizing: border-box;
 }
 
 .header-inner {
@@ -19,7 +21,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 16px;
+    min-width: 0;
 }
 
 .brand {
@@ -27,7 +30,9 @@
     align-items: center;
     gap: 12px;
     text-decoration: none;
-    color: inherit
+    color: inherit;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .brand-logo {
@@ -53,6 +58,7 @@
     font-size: 1.5rem;
     letter-spacing: 0.04em;
     line-height: 1;
+    min-width: 0;
 }
 
 .brand-title {
@@ -68,6 +74,9 @@
     margin-top: 10px;
     color: #c9c9c9;
     font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .makers {
@@ -76,8 +85,30 @@
 
 .site-nav {
     display: flex;
-    gap: 24px;
+    gap: 20px;
     flex-wrap: wrap;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #111111;
+    background: #f3a832;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-1px);
+    background: #ffbf4d;
 }
 
 .menu-toggle {
@@ -111,22 +142,51 @@
     transform: translateY(-6px) rotate(-45deg);
 }
 
-@media (max-width: 1280px) {
-    .site-header {
-        width: calc(100% - 40px);
-        justify-content: center;
+@media (max-width: 900px) {
+    .header-inner {
+        gap: 12px;
     }
 
+    .site-nav {
+        gap: 12px;
+    }
 }
 
 @media (max-width: 768px) {
+    .site-header {
+        top: 8px;
+        padding: 0.6rem 0.85rem;
+    }
+
     .header-inner {
         position: relative;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+    }
+
+    .brand {
+        flex: 1 1 auto;
+    }
+
+    .brand-logo {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .brand-text {
+        font-size: 1.2rem;
+    }
+
+    .shared-workshop {
+        font-size: 0.58rem;
+        letter-spacing: 0.16rem;
+        margin-top: 6px;
     }
 
     .menu-toggle {
         display: flex;
+        flex-shrink: 0;
     }
 
     .site-nav {
@@ -158,6 +218,16 @@
     }
 
     .cta-button {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-text {
+        font-size: 1rem;
+    }
+
+    .shared-workshop {
         display: none;
     }
 }
