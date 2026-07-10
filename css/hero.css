@@ -83,9 +83,9 @@ main {
 }
 
 #criacao {
-    margin: 10px;
+    margin: 9px;
     color: #f8f9fa; /* Soft off-white that is easy on the eyes */
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     text-shadow: 
         0 0 4px rgba(255, 255, 255, 0.8),
         0 0 10px rgba(243, 168, 50, 0.7),
