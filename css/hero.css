@@ -93,7 +93,7 @@ main {
         0 0 10px rgba(243, 168, 50, 0.7),
         0 0 20px rgba(243, 168, 50, 0.5);
     animation: neon-pulse 2s infinite alternate;
-    font-size: 4rem;
+    font-size: 3.8rem;
 }
 
 @keyframes neon-pulse {
