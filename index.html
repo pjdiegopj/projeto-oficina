@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oficina Makers</title>
-     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/hero.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/reset.css">
+
 </head>
 
 <body>
@@ -40,6 +41,12 @@
     </header>
 
     <main>
+        <section class="hero">
+            <div class="principal">
+                <p class="texto">OFICINA MAKERS, O SEU LOCAL DE <br><span id="criacao">CRIAÇÃO</span></p>
+            </div>
+        </section>
+
         <section class="categories-section">
             <div class="category-card impressao3d">
                 <a href="#" class="category-link">
@@ -108,6 +115,7 @@
         </div>
     </footer>
 
+    <script src="./js/hero-animation.js" defer></script>
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const siteNav = document.querySelector('.site-nav');
