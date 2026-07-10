@@ -85,7 +85,7 @@ main {
 
 #criacao {
     display: flex;
-    justify-content: center;
+    text-align: center
     letter-spacing: 1.5rem;
     color: #f8f9fa; /* Soft off-white that is easy on the eyes */
     margin-top: 1rem;
